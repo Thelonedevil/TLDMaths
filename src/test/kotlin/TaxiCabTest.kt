@@ -26,7 +26,11 @@ class TaxiCabTest {
         println(" = ${result?.key},took ${System.currentTimeMillis() - start} ms")
 
     }
-
+    @Test
+    fun TaxiCabToString(){
+        result= TaxiCab(3,2,2)
+        assertEquals("1729 = 1^3 + 12^3 = 9^3 + 10^3",result.toString())
+    }
     @Test fun TaxiCab122() {
         result = TaxiCab(1, 2, 2)
         assertEquals(BigInteger.valueOf(4L), result?.key)
