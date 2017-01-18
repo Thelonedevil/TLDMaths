@@ -1,7 +1,13 @@
 /*
-!/src
-!/src/*
-!/*.md
+!/TLDMaths
+/TLDMaths/*
+!/TLDMaths/src
+!/TLDMaths/pom.xml
+!/Benchmarks
+/Benchmarks/*
+!/Benchmarks/src
+!/Benchmarks/pom.xml
+!*.md
 !.gitignore
 !pom.xml
 !LICENSE

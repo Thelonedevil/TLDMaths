@@ -1,7 +1,9 @@
+package uk.tldcode.math.tldmaths
+
 import java.math.BigInteger
 import java.util.*
 
-class TaxiCab(val Entry: Map.Entry<BigInteger, List<List<BigInteger>>>,val Power : Int) {
+class TaxiCab(val Entry: Map.Entry<BigInteger, List<List<BigInteger>>>, val Power : Int) {
 
     override fun toString(): String {
         return "${Entry.key} = ${Entry.value.map { it.joinToString("^$Power + ", "", "^$Power") }.joinToString(" = ")}"
