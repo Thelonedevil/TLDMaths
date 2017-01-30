@@ -43,6 +43,9 @@
                 <configuration>
                     <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
                     <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
+                        <excludes>
+                            <exclude>**/App**</exclude>
+                        </excludes>
                 </configuration>
                 <executions>
                     <execution>

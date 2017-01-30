@@ -35,6 +35,7 @@ import org.openjdk.jmh.annotations.Benchmark
 import org.openjdk.jmh.annotations.BenchmarkMode
 import org.openjdk.jmh.annotations.Mode
 import org.openjdk.jmh.annotations.OutputTimeUnit
+import uk.tldcode.math.tldmaths.A008233
 import uk.tldcode.math.tldmaths.Fibonacci
 import java.math.BigInteger
 import java.util.concurrent.TimeUnit
@@ -43,9 +44,16 @@ open class MyBenchmark {
 
     @Benchmark
     @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    fun testMethod(): Sequence<BigInteger> {
-        return Fibonacci().take(100)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    fun FibonacciBenchmark(): List<BigInteger> {
+        return Fibonacci().take(10000).toList()
+    }
+
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    fun A008233Benchmark(): List<BigInteger> {
+        return A008233().take(10000).toList()
     }
 
 }
