@@ -1,12 +1,12 @@
 package uk.tldcode.math.tldmaths
 
-import generate.generate
+import sequence.buildSequence
 import uk.tldcode.math.tldmaths.biginteger.inc
 import java.math.BigInteger
 
 
 object A049329 : BigIntegerSequence {
-    override operator fun invoke(): Sequence<BigInteger> = generate {
+    override operator fun invoke(): Sequence<BigInteger> = buildSequence {
         yield(BigInteger.ZERO)
         var n = BigInteger.ONE
         yield(n)

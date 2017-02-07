@@ -7,6 +7,7 @@ import java.math.BigInteger
 class BigIntegerRange(start: BigInteger, endInclusive: BigInteger) : BigIntegerProgression(start, endInclusive, BigInteger.ONE), ClosedRange<BigInteger> {
     override val start: BigInteger get() = first
     override val endInclusive: BigInteger get() = last
+    @Suppress("ConvertTwoComparisonsToRangeCheck")
     override fun contains(value: BigInteger): Boolean = first <= value && value <= last
 
     override fun isEmpty(): Boolean = first > last
@@ -23,7 +24,7 @@ class BigIntegerRange(start: BigInteger, endInclusive: BigInteger) : BigIntegerP
     override fun toString(): String = "$first..$last"
 
     companion object {
-        /** An empty range of values of type Int. */
+        /** An empty range of values of type BigInteger. */
         val EMPTY: BigIntegerRange = BigIntegerRange(BigInteger.ONE, BigInteger.ZERO)
     }
 }
